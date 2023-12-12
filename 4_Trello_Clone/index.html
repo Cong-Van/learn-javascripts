@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/b231224fdf.js"
+      defer
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" defer src="./js/controller.js"></script>
+    <title>Trello Clone</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="container-header">
+        <div class="container-header-title">
+          <h1><i class="fa-brands fa-trello"></i> Trello</h1>
+        </div>
+
+        <div class="board-header">
+          <h2>Works list each day</h2>
+          <i class="fa-regular fa-star"></i>
+          <div>
+            <button class="icon-round">A</button>
+          </div>
+          <button class="btn-action add-more">
+            <i class="fa-solid fa-ellipsis"></i>
+          </button>
+        </div>
+      </header>
+
+      <main class="main-board">
+        <div class="board-canvas">
+          <div class="list-container">
+            <!-- <li class="works-list" data-id="1" draggable="true">
+              <div class="list-header">
+                <div class="list-header-title">
+                  <h4 class="list-title">Back log</h4>
+                  <textarea class="hidden" rows="1">Back log</textarea>
+                </div>
+                <button class="btn-action btn--open-modal">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </button>
+              </div>
+              <ol class="list-cards">
+                <li data-id="1" data-list-id="1" class="card card-contain" draggable="true">
+                  <div class="card-content">
+                    <p>Công việc 1: Test thôi</p>
+                    <i class="fa-solid fa-pen-to-square"></i
+                    ><i class="fa-solid fa-trash"></i>
+                  </div>
+                  <form action="" class="edit-card hidden">
+                    <textarea rows="2">Công việc 1: Test thôi</textarea>
+                    <button class="btn-save">Save</button>
+                  </form>
+                </li>
+              </ol>
+              <div class="list-footer">
+                <button class="btn-open-add btn--open-add-card">
+                  <div class="card">
+                    <i class="fa-solid fa-plus"></i>&ensp; Add a card...
+                  </div>
+                </button>
+                <form class="input-add input--add-card hidden">
+                  <textarea
+                    class="card"
+                    rows="3"
+                    placeholder="Enter list title..."
+                  ></textarea>
+                  <div class="add-btns">
+                    <button type="submit" class="btn-add btn-add-card">
+                      Add card
+                    </button>
+                    <button
+                      type="button"
+                      class="btn--close-add btn--close-add-card"
+                    >
+                      &times;
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </li> -->
+
+            <div class="add-list">
+              <li class="btn-open-add btn--open-add-list">
+                <button>
+                  <i class="fa-solid fa-plus"></i>&ensp; Add another list
+                </button>
+              </li>
+              <form class="input-add input--add-list hidden">
+                <textarea
+                  class="card"
+                  rows="1"
+                  placeholder="Enter list title..."
+                  style="font-size: 14px; color: #333"
+                ></textarea>
+                <div class="add-btns">
+                  <button type="submit" class="btn-add btn-add-list">
+                    Add list
+                  </button>
+                  <button
+                    type="button"
+                    class="btn-close-add btn--close-add btn--close-add-list"
+                  >
+                    &times;
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <div class="list-action modal hidden">
+              <div class="list-action-header">
+                <h4>List action</h4>
+                <button class="btn--close-modal">&times;</button>
+              </div>
+              <ul class="list-action-content">
+                <li>Add card...</li>
+                <li>Move all cards in this list</li>
+                <li>Remove all cards in this list</li>
+                <li class="remove-list">Remove this list</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="overlay hidden"></div>
+  </body>
+</html>

@@ -1,0 +1,382 @@
+/* Common */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1682687220067-dced9a881b56?auto=format&fit=crop&q=80&w=1975&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+textarea {
+  border: none;
+  outline: none;
+  color: #111;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  resize: none;
+  overflow: hidden;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.input-add {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.add-btns {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-add,
+.btn-save {
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 550;
+  border-radius: 5px;
+  background-color: #0c66e4;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn--close-add {
+  width: 32px;
+  height: 32px;
+  font-size: 22px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn--close-add:hover {
+  background-color: #ccc;
+}
+
+.icon-round {
+  background-color: #ff8620;
+  height: 28px;
+  width: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.btn-action {
+  background: none;
+  padding: 6px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.btn-action:hover {
+  background-color: #aaa;
+}
+
+.card {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  word-wrap: break-word;
+  padding: 8px 12px;
+}
+
+/* Header */
+.container-header {
+  position: fixed;
+  width: 100%;
+}
+
+.container-header-title {
+  padding: 12px 25px;
+  background-color: #284141;
+  color: #fff;
+}
+
+.container-header-title h1 {
+  font-size: 22px;
+}
+
+.board-header {
+  width: 100%;
+  padding: 10px 15px 10px 25px;
+  background-color: #bcbcbc;
+  color: #fff;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.board-header h2 {
+  font-size: 20px;
+}
+
+.board-header div {
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+  flex-grow: 2;
+  justify-self: end;
+}
+
+.icon-round {
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.header-content button {
+  width: 30px;
+}
+/* Header */
+
+/* List container */
+.board-canvas {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  height: calc(100vh - 100px);
+  overflow: auto;
+}
+
+.list-container {
+  margin: 30px;
+  display: flex;
+  gap: 10px;
+}
+
+.works-list {
+  background-color: #eaeaea;
+  flex: 0 0 240px;
+  height: fit-content;
+  overflow: auto;
+  padding: 8px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.list-header {
+  display: flex;
+  gap: 4px;
+}
+
+.list-header-title {
+  flex-grow: 2;
+  font-weight: 550;
+}
+
+.list-header-title * {
+  padding: 8px;
+  word-wrap: break-word;
+}
+
+.list-header-title h4 {
+  width: 100%;
+  word-break: break-all;
+}
+
+.list-header-title textarea {
+  border: #0c66e4 solid 1px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.list-header button {
+  color: #666;
+  height: 28px;
+  width: 30px;
+}
+
+.list-header button:hover {
+  background-color: #ddc;
+}
+
+.list-cards {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  max-height: calc(60vh - 100px);
+  overflow-y: auto;
+}
+
+.list-cards .card {
+  background-color: #fff;
+  margin-bottom: 8px;
+}
+
+.list-cards .card:hover {
+  box-shadow: 0 3px 3px #00000033;
+}
+
+.card-content {
+  display: flex;
+  gap: 8px;
+  justify-content: end;
+}
+
+.card-content p {
+  flex-grow: 2;
+  justify-self: start;
+  word-break: break-all;
+}
+
+.card-content i:hover {
+  color: #ff8620;
+}
+
+.btn--open-add-card {
+  width: 100%;
+  text-align: left;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #566;
+  font-weight: 550;
+}
+
+.btn--open-add-card:hover {
+  background-color: #d4d8d8;
+}
+
+.add-list {
+  flex: 0 0 240px;
+  height: fit-content;
+}
+
+.btn--open-add-list {
+  padding: 12px;
+  background: linear-gradient(to right, #bbb, #ddd);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn--open-add-list button {
+  font-weight: 550;
+  font-size: 16px;
+  color: #fff;
+  text-align: left;
+  cursor: inherit;
+}
+
+.input--add-list {
+  background-color: #eaeaea;
+  height: fit-content;
+  padding: 8px;
+  border-radius: 10px;
+}
+/* List container */
+
+/*List action*/
+.list-action {
+  background-color: #efefef;
+  color: #444;
+  width: 250px;
+  height: fit-content;
+  border-radius: 8px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+}
+
+.list-action-header {
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+}
+
+.btn--close-modal {
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.btn--close-modal:hover {
+  background-color: #ccc;
+}
+
+.list-action h4 {
+  grid-column: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-action-content {
+  padding-bottom: 10px;
+}
+
+.list-action li {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.list-action li:hover {
+  background-color: #d4d8d8;
+}
+
+/* Dragging */
+.is-dragging {
+  background-color: #fff;
+  color: #888;
+  rotate: 1deg;
+  transform: translateY(3px);
+  box-shadow: 2px 5px 5px #666;
+}
+
+/*--Hidden--*/
+.hidden {
+  display: none;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 2;
+}
+
+.display {
+  z-index: 4;
+}

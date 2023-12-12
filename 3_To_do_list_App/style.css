@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #eceff5;
+}
+
+.todo-list,
+.update {
+  width: 100%;
+  max-width: 550px;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 10px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 35px;
+  text-shadow: 2px 2px 4px #ff58456d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.update .title {
+  font-size: 30px;
+}
+
+.todo-list h2 img {
+  width: 40px;
+}
+
+/* Setup update task & overlay to pop-up when click pencil*/
+.update {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(80, 0, 0);
+  filter: blur(10px);
+  z-index: 2;
+}
+
+.add-to-list,
+.update-task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #edeef0;
+  border-radius: 40px;
+  padding-left: 20px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+}
+
+.btn-add,
+.btn-update {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #ff5945;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+.list-container {
+  max-height: 350px;
+  overflow: auto;
+}
+
+ul li {
+  list-style: none;
+  font-size: 18px;
+  user-select: none;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-image: url(./img/doing.png);
+  background-size: cover;
+  background-position: center;
+}
+
+ul li.done {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.done::before {
+  background-image: url(./img/done.png);
+}
+
+ul li i.fa-pen-to-square {
+  position: absolute;
+  right: 40px;
+  top: 15px;
+}
+
+ul li i.fa-trash {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+ul li i:hover {
+  color: #ff5945;
+}
+
+.btn-delete {
+  border: none;
+  outline: none;
+  padding: 10px;
+  background: #ff5945;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 30px;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
